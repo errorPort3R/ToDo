@@ -27,9 +27,21 @@ public class Main
                 case "2":
                     System.out.printf("\nEnter the number of the item you wish to toggle: ");
                     String numStr = input.nextLine();
-                    int num = Integer.valueOf(numStr);
-                    ToDoItem tempItem = items.get(num-1);
-                    tempItem.setDone(!tempItem.isDone());
+                    try
+                    {
+                        int num = Integer.valueOf(numStr);
+                        ToDoItem tempItem = items.get(num - 1);
+                        tempItem.setDone(!tempItem.isDone());
+                    }
+                    catch (NumberFormatException e)
+                    {
+                        System.err.printf("\nYou Didn't Type A Number!!!");
+                    }
+                    catch (ArrayIndexOutOfBoundsException e)
+                    {
+                        System.err.printf("\nItem Does Not Exist!!!!");
+                    }
+
                     break;
                 case "3":
                     int i = 1;

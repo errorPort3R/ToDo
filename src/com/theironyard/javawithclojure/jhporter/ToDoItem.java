@@ -29,5 +29,4 @@ public class ToDoItem
     public void setDone(boolean done) {
         isDone = done;
     }
-
 }

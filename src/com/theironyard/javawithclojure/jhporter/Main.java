@@ -37,13 +37,15 @@ public class Main
     public static void showItems(ArrayList<ToDoItem> items)
     {
         int i = 1;
+        System.out.printf("\n%5s|%3s.", "Done", "  Task");
+        System.out.printf("\n________________________________");
         for( ToDoItem toDoItem : items)
         {
             String checkBox = "[ ]";
             if(toDoItem.isDone()) {
                 checkBox = "[x]";
             }
-            System.out.printf("\n%s%d. %s", checkBox, i, toDoItem.getText());
+            System.out.printf("\n%5s|%3d. %s", checkBox, i, toDoItem.getText());
             i++;
         }
         System.out.printf("\n\n");

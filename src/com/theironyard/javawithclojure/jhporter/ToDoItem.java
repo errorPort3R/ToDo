@@ -5,8 +5,16 @@ package com.theironyard.javawithclojure.jhporter;
  */
 public class ToDoItem
 {
+    private int id;
     private String text;
     private boolean isDone;
+
+    public ToDoItem(int id, String text, boolean isDone)
+    {
+        this.id = id;
+        this.text = text;
+        this.isDone = isDone;
+    }
 
     public ToDoItem(String text, boolean isDone)
     {
@@ -28,5 +36,15 @@ public class ToDoItem
 
     public void setDone(boolean done) {
         isDone = done;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+    public void setId(int id)
+    {
+        this.id = id;
     }
 }
